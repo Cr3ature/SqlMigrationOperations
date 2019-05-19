@@ -1,5 +1,5 @@
 # SQL Migration Operations
-[![Build Status](https://dev.azure.com/DavidVanderheyden/SpecificatR/_apis/build/status/Build.Pipeline?branchName=master)](https://dev.azure.com/DavidVanderheyden/SpecificatR/_build/latest?definitionId=7&branchName=master)
+[![Build status](https://dev.azure.com/DavidVanderheyden/SqlMigrationOperations/_apis/build/status/Build.Pipeline)](https://dev.azure.com/DavidVanderheyden/SqlMigrationOperations/_build/latest?definitionId=13)
 
 This is an extension library for the migrations used in EF Core. It's a work in progress library, as new and additional extensions will be added at any given time. So feel free to give feedback, request additional support, ...
 
