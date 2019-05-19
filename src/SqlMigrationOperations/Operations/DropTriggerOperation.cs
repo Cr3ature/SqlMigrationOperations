@@ -6,7 +6,7 @@ namespace SqlMigrationOperations.Operations
 {
     public static class DropTriggerOperationMigrationBuilderExtension
     {
-        internal static MigrationBuilder DropTrigger(
+        public static MigrationBuilder DropTrigger(
             this MigrationBuilder migrationBuilder,
             string triggerName)
         {
