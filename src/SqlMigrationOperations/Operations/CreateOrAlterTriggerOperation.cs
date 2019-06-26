@@ -50,7 +50,7 @@ namespace SqlMigrationOperations.Operations
                 .Append(sqlHelper.DelimitIdentifier(operation.TriggerName))
                 .Append(" ON ")
                 .Append(sqlHelper.DelimitIdentifier(operation.TriggerTable))
-                .Append(sqlHelper.DelimitIdentifier(operation.TriggerOnAction))
+                .Append(operation.TriggerOnAction)
                 .Append(" AS BEGIN ")
                 .Append(operation.TriggerFunction)
                 .Append(" END;")
