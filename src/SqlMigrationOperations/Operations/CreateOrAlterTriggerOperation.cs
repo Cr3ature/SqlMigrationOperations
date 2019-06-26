@@ -10,6 +10,7 @@ namespace SqlMigrationOperations.Operations
             this MigrationBuilder migrationBuilder,
             string triggerName,
             string triggerTable,
+            string triggerOnAction,
             string triggerFunction)
         {
             migrationBuilder.Operations.Add(
@@ -18,6 +19,7 @@ namespace SqlMigrationOperations.Operations
                     TriggerFunction = triggerFunction,
                     TriggerName = triggerName,
                     TriggerTable = triggerTable,
+                    TriggerOnAction = triggerOnAction,
                 });
 
             return migrationBuilder;
