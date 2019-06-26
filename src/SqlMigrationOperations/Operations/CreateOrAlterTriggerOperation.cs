@@ -26,11 +26,13 @@ namespace SqlMigrationOperations.Operations
 
     public class CreateOrAlterTriggerOperation : MigrationOperation
     {
+        public string TriggerFunction { get; set; }
+
         public string TriggerName { get; set; }
 
-        public string TriggerTable { get; set; }
+        public string TriggerOnAction { get; set; }
 
-        public string TriggerFunction { get; set; }
+        public string TriggerTable { get; set; }
 
         public virtual void Generate(
                     CreateOrAlterTriggerOperation operation,
@@ -46,7 +48,8 @@ namespace SqlMigrationOperations.Operations
                 .Append(sqlHelper.DelimitIdentifier(operation.TriggerName))
                 .Append(" ON ")
                 .Append(sqlHelper.DelimitIdentifier(operation.TriggerTable))
-                .Append(" FOR UPDATE AS BEGIN ")
+                .Append(sqlHelper.DelimitIdentifier(operation.TriggerOnAction))
+                .Append(" AS BEGIN ")
                 .Append(operation.TriggerFunction)
                 .Append(" END;")
                 .Append("');")
